@@ -1,0 +1,9 @@
+
+CUSTOM_CERTIFICATE_BUNDLE=/workspaces/Infinity/.devcontainer/ca-certificates.crt
+
+if [ -f "$CUSTOM_CERTIFICATE_BUNDLE" ]; then
+    # set certificates for requests
+    # fixes poetry ssl errors
+    export REQUESTS_CA_BUNDLE=$CUSTOM_CERTIFICATE_BUNDLE
+    export SSL_CERT_FILE=$CUSTOM_CERTIFICATE_BUNDLE
+fi
