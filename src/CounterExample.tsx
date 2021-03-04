@@ -1,7 +1,7 @@
+import React, { useState } from "react";
 import { Button, Grid } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
-import React, { useState } from "react";
 
 const Counter: React.FC = () => {
     const [counter, setCounter] = useState<number>(0);
